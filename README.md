@@ -1,33 +1,16 @@
 **1. Clone wallet sources**
 
-```
 git clone https://github.com/cryptonotefoundation/cryptonotewallet.git
-```
 
-**2. Modify `CryptoNoteWallet.cmake`**
- 
-```
-set(CN_PROJECT_NAME "furiouscoin")
-set(CN_CURRENCY_DISPLAY_NAME "FuriousCoin")
-set(CN_CURRENCY_TICKER "XFC")
-```
+**2. Add moab blockchain**
 
-**3. Set symbolic link to coin sources at the same level as `src`. For example:**
+git submodule add https://github.com/moabproject/MoabCoin.git cryptonote
 
-```
-ln -s ../cryptonote cryptonote
-```
+**3. Build**
 
-Alternative way is to create git submodule:
-
-```
-git submodule add https://github.com/cryptonotefoundation/cryptonote.git cryptonote
-```
-
-Replace URL with git remote repository of your coin.
-
-**4. Build**
-
-```
 mkdir build && cd build && cmake .. && make
-```
+
+**. Start the wallet**
+
+go to the "buid" folder and ./MoabProject
+
